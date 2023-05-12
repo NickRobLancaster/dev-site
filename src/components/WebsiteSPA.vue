@@ -274,10 +274,10 @@ const copyText = (textToCopy) => {
       class="overflow-y-auto h-full flex flex-row justify-between flex-1 bg-gray-50"
     >
       <!-- if want to use left column later -->
-      <div class=""></div>
+      <!-- <div class=""></div> -->
       <div v-show="page === 1" class="flex-1">
         <div
-          class="relative flex flex-col justify-center items-center gap-10 w-full min-h-full bg-gradient-to-br from-indigo-500 via-orange-500 to-sky-500 p-3"
+          class="relative flex flex-col justify-center items-center gap-10 w-full min-h-full bg-gradient-to-br from-indigo-500 via-orange-500 to-sky-500 p-3 py-20"
         >
           <h1 class="text-5xl text-white text-center">{{ site.name }}</h1>
           <h1 class="text-2xl text-white text-center">
