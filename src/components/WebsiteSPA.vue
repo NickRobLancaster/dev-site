@@ -105,11 +105,11 @@ const copyText = (textToCopy) => {
       <template #body>
         <div class="flex flex-col p-3 justify-center items-center h-full gap-5">
           <h1 class="text-2xl">Our Email</h1>
-          <div class="rounded-2xl shadow-2xl">
+          <div class="flex flex-row rounded-2xl shadow-2xl">
             <input
               disabled
               type="text"
-              class="p-3 rounded-l-2xl bg-white"
+              class="flex-1 p-3 rounded-l-2xl bg-white"
               :value="site.email"
             /><button
               @click="copyText(site.email)"
@@ -167,11 +167,11 @@ const copyText = (textToCopy) => {
       <template #body>
         <div class="flex flex-col p-3 justify-center items-center h-full gap-5">
           <h1 class="text-2xl">Our Phone Number</h1>
-          <div class="rounded-2xl shadow-2xl">
+          <div class="flex flex-row rounded-2xl shadow-2xl">
             <input
               disabled
               type="text"
-              class="p-3 rounded-l-2xl bg-white"
+              class="flex-1 p-3 rounded-l-2xl bg-white"
               :value="formattedPhone"
             /><button
               @click="copyText(site.phone)"
