@@ -213,7 +213,7 @@ const copyText = (textToCopy) => {
       >
         <!-- nav items -->
         <!-- left -->
-        <div class="p-2">
+        <div class="p-1">
           <!-- will be image in future -->
           <!-- <img src="" alt="" /> -->
           <!-- using text for now -->
@@ -225,7 +225,7 @@ const copyText = (textToCopy) => {
                 : 'text-white bg-slate-700'
             "
           >
-            {{ "$\{ " + site.brand + " \}" }}
+            {{ "$\{" + site.brand + "\}" }}
           </h1>
         </div>
         <!-- middle -->
