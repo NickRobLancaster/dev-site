@@ -10,6 +10,7 @@ const darkMode = ref(false);
 const toggleDarkMode = () => (darkMode.value = !darkMode.value);
 
 const site = reactive({
+  brand: "AlisoViejo.dev",
   name: "Aliso Viejo Devs",
   email: "nickroblancaster@gmail.com",
   phone: "7143952633",
@@ -217,7 +218,7 @@ const copyText = (textToCopy) => {
             class="text-xl"
             :class="darkMode ? 'text-white' : 'text-slate-700'"
           >
-            {{ site.name }}
+            {{ site.brand }}
           </h1>
         </div>
         <!-- middle -->
@@ -254,7 +255,7 @@ const copyText = (textToCopy) => {
             @click="page = 2"
             class="rounded-2xl border-none cursor-pointer text-white p-3 flex items-center text-center"
           >
-            About Us
+            About
           </div>
         </div>
       </div>
