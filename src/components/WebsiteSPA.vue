@@ -109,16 +109,20 @@ const copyText = (textToCopy) => {
             <input
               disabled
               type="text"
-              class="flex-1 p-3 rounded-l-2xl bg-white"
+              class="inline p-3 rounded-l-2xl bg-white"
               :value="site.email"
             /><button
               @click="copyText(site.email)"
-              class="p-3 bg-gray-500 text-white rounded-r-2xl hover:bg-gray-700"
+              class="inline p-3 bg-gray-500 text-white rounded-r-2xl hover:bg-gray-700"
             >
               Copy
             </button>
           </div>
+        </div>
+      </template>
 
+      <template #footer>
+        <div class="flex p-3">
           <a
             :href="`mailto:` + site.email"
             class="p-3 bg-emerald-500 text-white rounded-2xl hover:bg-emerald-700 shadow-2xl"
@@ -126,12 +130,6 @@ const copyText = (textToCopy) => {
             Compose Email
           </a>
         </div>
-      </template>
-
-      <template #footer>
-        <!-- <button class="hover:bg-blue-700 bg-blue-500 py-3 px-5 text-white">
-        Close Email Modal
-      </button> -->
       </template>
     </Modal>
 
@@ -167,20 +165,24 @@ const copyText = (textToCopy) => {
       <template #body>
         <div class="flex flex-col p-3 justify-center items-center h-full gap-5">
           <h1 class="text-2xl">Our Phone Number</h1>
-          <div class="flex flex-row rounded-2xl shadow-2xl">
+          <div class="flex flex-row justify-center rounded-2xl shadow-2xl">
             <input
               disabled
               type="text"
-              class="flex-1 p-3 rounded-l-2xl bg-white"
+              class="inline p-3 rounded-l-2xl bg-white"
               :value="formattedPhone"
             /><button
               @click="copyText(site.phone)"
-              class="p-3 bg-gray-500 text-white rounded-r-2xl hover:bg-gray-700"
+              class="inline p-3 bg-gray-500 text-white rounded-r-2xl hover:bg-gray-700"
             >
               Copy
             </button>
           </div>
+        </div>
+      </template>
 
+      <template #footer>
+        <div class="flex p-3">
           <a
             :href="'tel:' + site.phone"
             class="p-3 bg-emerald-500 text-white rounded-2xl hover:bg-emerald-700 shadow-2xl"
@@ -188,12 +190,6 @@ const copyText = (textToCopy) => {
             Call Now
           </a>
         </div>
-      </template>
-
-      <template #footer>
-        <!-- <button class="hover:bg-blue-700 bg-blue-500 py-3 px-5 text-white">
-        Close Call Us Modal
-      </button> -->
       </template>
     </Modal>
   </Teleport>
