@@ -11,8 +11,8 @@ const toggleDarkMode = () => (darkMode.value = !darkMode.value);
 
 const site = reactive({
   name: "Aliso Viejo Devs",
-  email: "info@avdevs.io",
-  phone: "8888558555",
+  email: "nickroblancaster@gmail.com",
+  phone: "7143952633",
   address: ["22501 Chase", "Apt 3112", "Aliso Viejo", "CA", "92656"],
 });
 
@@ -108,7 +108,7 @@ const copyText = (textToCopy) => {
             disabled
             type="text"
             class="p-3 rounded-l-2xl bg-white"
-            value="info@avdevs.app"
+            :value="site.email"
           /><button
             @click="copyText(site.email)"
             class="p-3 bg-gray-500 text-white rounded-r-2xl hover:bg-gray-700"
@@ -118,7 +118,7 @@ const copyText = (textToCopy) => {
         </div>
 
         <a
-          href="mailto:info@avdevs.app"
+          :href="`mailto:` + site.email"
           class="p-3 bg-emerald-500 text-white rounded-2xl hover:bg-emerald-700 shadow-2xl"
         >
           Compose Email
