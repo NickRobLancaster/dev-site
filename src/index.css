@@ -1,0 +1,7 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.cbtn {
+  @apply py-1 px-3 rounded hover:bg-slate-500;
+}
