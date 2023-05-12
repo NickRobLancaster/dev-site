@@ -199,12 +199,13 @@ const copyText = (textToCopy) => {
   </Teleport>
   <div class="w-screen h-screen flex flex-col justify-between">
     <!-- notices -->
-    <div class="">
-      <!-- notice example -->
-      <!-- <div class="w-full p-3 bg-red-500">
+    <!-- <div class=""> -->
+    <!-- notice example -->
+    <!-- <div class="w-full p-3 bg-red-500">
         <p class="text-white">This is my notice</p>
       </div> -->
-    </div>
+    <!-- </div> -->
+
     <!-- nav -->
     <div class="w-full">
       <div
@@ -218,7 +219,7 @@ const copyText = (textToCopy) => {
           <!-- <img src="" alt="" /> -->
           <!-- using text for now -->
           <h1
-            class="text-xl p-2 border rounded-2xl"
+            class="text-xl p-1 lg:p-3 border rounded-xl"
             :class="
               darkMode
                 ? 'text-slate-700 bg-slate-50'
@@ -231,7 +232,9 @@ const copyText = (textToCopy) => {
         <!-- middle -->
         <!-- <div class="flex flex-row justify-center flex-1 p-3"></div> -->
         <!-- right -->
-        <div class="flex flex-row justify-end items-center flex-1 p-2 gap-2">
+        <div
+          class="flex flex-row justify-end items-center flex-1 p-2 lg:gap-2 gap-1"
+        >
           <!-- button toolbar -->
           <button
             @click="toggleDarkMode"
@@ -240,7 +243,7 @@ const copyText = (textToCopy) => {
                 ? 'bg-white border-slate-700'
                 : 'bg-slate-700 border-white'
             "
-            class="border-4 border-dotted p-3 rounded-full h-6 w-6"
+            class="border-4 border-dotted p-1 lg:p-3 rounded-full h-6 w-6"
           ></button>
           <div
             :class="
@@ -249,7 +252,7 @@ const copyText = (textToCopy) => {
                 : 'bg-slate-500 hover:bg-slate-700'
             "
             @click="page = 1"
-            class="rounded-2xl border-none cursor-pointer text-white p-3 flex items-center text-center"
+            class="rounded-xl border-none cursor-pointer text-white p-1 lg:p-3 flex items-center text-center"
           >
             Home
           </div>
@@ -260,7 +263,7 @@ const copyText = (textToCopy) => {
                 : 'bg-slate-500 hover:bg-slate-700'
             "
             @click="page = 2"
-            class="rounded-2xl border-none cursor-pointer text-white p-3 flex items-center text-center"
+            class="rounded-xl border-none cursor-pointer text-white p-1 lg:p-3 flex items-center text-center"
           >
             About
           </div>
