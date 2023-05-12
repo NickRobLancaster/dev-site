@@ -206,7 +206,7 @@ const copyText = (textToCopy) => {
       </div> -->
     </div>
     <!-- nav -->
-    <div class="">
+    <div class="w-full">
       <div
         :class="darkMode ? 'bg-slate-700' : 'bg-slate-50'"
         class="flex flex-row justify-between items-center gap-5"
