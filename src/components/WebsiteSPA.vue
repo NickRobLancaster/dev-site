@@ -339,7 +339,7 @@ const copyText = (textToCopy) => {
         </div>
       </div>
 
-      <div v-show="page === 2" class="flex-1">
+      <div v-show="page === 2" class="flex-1 py-20">
         <div
           class="relative flex flex-col justify-center items-center gap-10 w-full min-h-full bg-gradient-to-br from-indigo-500 to-sky-500 p-3"
         >
