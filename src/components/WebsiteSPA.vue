@@ -426,7 +426,7 @@ const copyText = (textToCopy) => {
     <!-- app toolbar - footer -->
     <div
       :class="darkMode ? 'bg-slate-700' : 'bg-white'"
-      class="flex flex-row justify-between items-center p-2"
+      class="flex flex-row justify-between items-center p-2 w-full"
     >
       <button
         @click="modalEmail = true"
