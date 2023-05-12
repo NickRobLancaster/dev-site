@@ -124,7 +124,7 @@ const copyText = (textToCopy) => {
       </template>
 
       <template #footer>
-        <div class="flex p-3">
+        <div class="flex bg-opacity-100 p-3">
           <a
             :href="`mailto:` + site.email"
             class="p-3 bg-emerald-500 text-white rounded-2xl hover:bg-emerald-700 shadow-2xl"
@@ -169,9 +169,7 @@ const copyText = (textToCopy) => {
           class="flex flex-col p-3 justify-center items-center h-full gap-5 w-full"
         >
           <h1 class="text-2xl">Our Phone Number</h1>
-          <div
-            class="flex flex-row justify-center rounded-2xl shadow-2xl w-full"
-          >
+          <div class="flex flex-row justify-center rounded-2xl shadow-2xl">
             <input
               disabled
               type="text"

@@ -56,7 +56,7 @@ const modalToggle = () => emit("close-modal");
       <!-- FOOTER -->
       <div
         :class="props.dark ? 'bg-slate-700' : 'bg-slate-50'"
-        class="flex flex-row-reverse justify-between items-center sticky bottom-0 bg-white overflow-hidden rounded-b-2xl"
+        class="flex flex-row-reverse justify-between items-center sticky bottom-0 overflow-hidden rounded-b"
       >
         <slot name="footer">
           <div class="p-6"></div>
