@@ -103,7 +103,9 @@ const copyText = (textToCopy) => {
       @close-modal="modalEmail = false"
     >
       <template #body>
-        <div class="flex flex-col p-3 justify-center items-center h-full gap-5">
+        <div
+          class="flex flex-col p-3 justify-center items-center h-full gap-5 w-full"
+        >
           <h1 class="text-2xl">Our Email</h1>
           <div class="flex flex-row rounded-2xl shadow-2xl">
             <input
@@ -163,7 +165,9 @@ const copyText = (textToCopy) => {
       @close-modal="modalCall = false"
     >
       <template #body>
-        <div class="flex flex-col p-3 justify-center items-center h-full gap-5">
+        <div
+          class="flex flex-col p-3 justify-center items-center h-full gap-5 w-full"
+        >
           <h1 class="text-2xl">Our Phone Number</h1>
           <div class="flex flex-row justify-center rounded-2xl shadow-2xl">
             <input
