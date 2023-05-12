@@ -48,7 +48,7 @@ const modalToggle = () => emit("close-modal");
 
       <div
         :class="props.dark ? 'bg-slate-400' : 'bg-slate-100'"
-        class="flex-1 bg-gray-100 border-y border-slate-300 overflow-y-auto"
+        class="flex-1 bg-gray-100 border-y border-slate-300 overflow-y-auto w-full"
       >
         <slot name="body"></slot>
       </div>
