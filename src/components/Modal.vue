@@ -17,7 +17,7 @@ const modalToggle = () => emit("close-modal");
   <div
     v-if="modalShown"
     @click.self="modalToggle"
-    class="fixed h-full w-full backdrop-blur-sm z-20 flex justify-center items-center p-10"
+    class="fixed h-full w-full backdrop-blur-sm z-20 flex justify-center items-center p-5"
   >
     <!-- actual modal -->
     <div

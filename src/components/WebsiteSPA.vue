@@ -111,11 +111,11 @@ const copyText = (textToCopy) => {
             <input
               disabled
               type="text"
-              class="inline p-3 rounded-l-2xl bg-white"
+              class="p-1 rounded-l-2xl bg-white"
               :value="site.email"
             /><button
               @click="copyText(site.email)"
-              class="inline p-3 bg-gray-500 text-white rounded-r-2xl hover:bg-gray-700"
+              class="p-3 bg-gray-500 text-white rounded-r-2xl hover:bg-gray-700"
             >
               Copy
             </button>
@@ -169,7 +169,9 @@ const copyText = (textToCopy) => {
           class="flex flex-col p-3 justify-center items-center h-full gap-5 w-full"
         >
           <h1 class="text-2xl">Our Phone Number</h1>
-          <div class="flex flex-row justify-center rounded-2xl shadow-2xl">
+          <div
+            class="flex flex-row justify-center rounded-2xl shadow-2xl w-full"
+          >
             <input
               disabled
               type="text"
