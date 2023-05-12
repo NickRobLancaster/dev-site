@@ -143,7 +143,7 @@ const copyText = (textToCopy) => {
     <template #body>
       <div class="h-full w-full flex flex-col justify-center items-center p-5">
         <div class="bg-gray-500 text-white rounded-2xl p-5 text-center">
-          <p class="text-3xl mb-5">Coming Soon</p>
+          <p class="text-3xl">Coming Soon</p>
           <p>
             Here you'll be able to fill out a questionaire that will help us
             speed along the development process for you and your product.
