@@ -1,5 +1,5 @@
 <script setup>
-import { ref, watch, computed, reactive } from "vue";
+import { ref, watch, computed, reactive, Teleport } from "vue";
 
 defineProps({
   msg: String,
@@ -95,105 +95,108 @@ const copyText = (textToCopy) => {
 </script>
 
 <template>
-  <Modal
-    :dark="darkMode"
-    :modalShown="modalEmail"
-    :modalHeader="'Email Us'"
-    @close-modal="modalEmail = false"
-  >
-    <template #body>
-      <div class="flex flex-col p-3 justify-center items-center h-full gap-5">
-        <h1 class="text-2xl">Our Email</h1>
-        <div class="rounded-2xl shadow-2xl">
-          <input
-            disabled
-            type="text"
-            class="p-3 rounded-l-2xl bg-white"
-            :value="site.email"
-          /><button
-            @click="copyText(site.email)"
-            class="p-3 bg-gray-500 text-white rounded-r-2xl hover:bg-gray-700"
+  <Teleport to="#modals-target">
+    <Modal
+      :dark="darkMode"
+      :modalShown="modalEmail"
+      :modalHeader="'Email Us'"
+      @close-modal="modalEmail = false"
+    >
+      <template #body>
+        <div class="flex flex-col p-3 justify-center items-center h-full gap-5">
+          <h1 class="text-2xl">Our Email</h1>
+          <div class="rounded-2xl shadow-2xl">
+            <input
+              disabled
+              type="text"
+              class="p-3 rounded-l-2xl bg-white"
+              :value="site.email"
+            /><button
+              @click="copyText(site.email)"
+              class="p-3 bg-gray-500 text-white rounded-r-2xl hover:bg-gray-700"
+            >
+              Copy
+            </button>
+          </div>
+
+          <a
+            :href="`mailto:` + site.email"
+            class="p-3 bg-emerald-500 text-white rounded-2xl hover:bg-emerald-700 shadow-2xl"
           >
-            Copy
-          </button>
+            Compose Email
+          </a>
         </div>
+      </template>
 
-        <a
-          :href="`mailto:` + site.email"
-          class="p-3 bg-emerald-500 text-white rounded-2xl hover:bg-emerald-700 shadow-2xl"
-        >
-          Compose Email
-        </a>
-      </div>
-    </template>
-
-    <template #footer>
-      <!-- <button class="hover:bg-blue-700 bg-blue-500 py-3 px-5 text-white">
+      <template #footer>
+        <!-- <button class="hover:bg-blue-700 bg-blue-500 py-3 px-5 text-white">
         Close Email Modal
       </button> -->
-    </template>
-  </Modal>
+      </template>
+    </Modal>
 
-  <Modal
-    :dark="darkMode"
-    :modalShown="modalGetStarted"
-    :modalHeader="'Get Started'"
-    @close-modal="modalGetStarted = false"
-  >
-    <template #body>
-      <div class="h-full w-full flex flex-col justify-center items-center p-5">
-        <div class="bg-gray-500 text-white rounded-2xl p-5 text-center">
-          <p class="text-3xl">Coming Soon</p>
-          <p>
-            Here you'll be able to fill out a questionaire that will help us
-            speed along the development process for you and your product.
-          </p>
-        </div>
-      </div>
-    </template>
-
-    <template #footer> </template>
-  </Modal>
-
-  <Modal
-    :dark="darkMode"
-    :modalShown="modalCall"
-    :modalHeader="'Call Us'"
-    @close-modal="modalCall = false"
-  >
-    <template #body>
-      <div class="flex flex-col p-3 justify-center items-center h-full gap-5">
-        <h1 class="text-2xl">Our Phone Number</h1>
-        <div class="rounded-2xl shadow-2xl">
-          <input
-            disabled
-            type="text"
-            class="p-3 rounded-l-2xl bg-white"
-            :value="formattedPhone"
-          /><button
-            @click="copyText(site.phone)"
-            class="p-3 bg-gray-500 text-white rounded-r-2xl hover:bg-gray-700"
-          >
-            Copy
-          </button>
-        </div>
-
-        <a
-          :href="'tel:' + site.phone"
-          class="p-3 bg-emerald-500 text-white rounded-2xl hover:bg-emerald-700 shadow-2xl"
+    <Modal
+      :dark="darkMode"
+      :modalShown="modalGetStarted"
+      :modalHeader="'Get Started'"
+      @close-modal="modalGetStarted = false"
+    >
+      <template #body>
+        <div
+          class="h-full w-full flex flex-col justify-center items-center p-5"
         >
-          Call Now
-        </a>
-      </div>
-    </template>
+          <div class="bg-gray-500 text-white rounded-2xl p-5 text-center">
+            <p class="text-3xl">Coming Soon</p>
+            <p>
+              Here you'll be able to fill out a questionaire that will help us
+              speed along the development process for you and your product.
+            </p>
+          </div>
+        </div>
+      </template>
 
-    <template #footer>
-      <!-- <button class="hover:bg-blue-700 bg-blue-500 py-3 px-5 text-white">
+      <template #footer> </template>
+    </Modal>
+
+    <Modal
+      :dark="darkMode"
+      :modalShown="modalCall"
+      :modalHeader="'Call Us'"
+      @close-modal="modalCall = false"
+    >
+      <template #body>
+        <div class="flex flex-col p-3 justify-center items-center h-full gap-5">
+          <h1 class="text-2xl">Our Phone Number</h1>
+          <div class="rounded-2xl shadow-2xl">
+            <input
+              disabled
+              type="text"
+              class="p-3 rounded-l-2xl bg-white"
+              :value="formattedPhone"
+            /><button
+              @click="copyText(site.phone)"
+              class="p-3 bg-gray-500 text-white rounded-r-2xl hover:bg-gray-700"
+            >
+              Copy
+            </button>
+          </div>
+
+          <a
+            :href="'tel:' + site.phone"
+            class="p-3 bg-emerald-500 text-white rounded-2xl hover:bg-emerald-700 shadow-2xl"
+          >
+            Call Now
+          </a>
+        </div>
+      </template>
+
+      <template #footer>
+        <!-- <button class="hover:bg-blue-700 bg-blue-500 py-3 px-5 text-white">
         Close Call Us Modal
       </button> -->
-    </template>
-  </Modal>
-
+      </template>
+    </Modal>
+  </Teleport>
   <div class="w-screen h-screen flex flex-col justify-between">
     <!-- notices -->
     <div class="">
