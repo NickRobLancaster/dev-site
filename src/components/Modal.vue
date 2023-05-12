@@ -23,12 +23,12 @@ const modalToggle = () => emit("close-modal");
     <div
       v-if="modalShown"
       :class="props.dark ? 'bg-slate-700' : 'bg-slate-100'"
-      class="w-full h-full lg:w-4/12 lg:h-3/6 rounded-2xl flex flex-col justify-between border-2"
+      class="w-full h-full lg:w-4/12 lg:h-3/6 rounded flex flex-col justify-between"
     >
       <!-- HEADER -->
       <div
         :class="props.dark ? 'bg-slate-700' : 'bg-slate-100'"
-        class="flex flex-row justify-between items-center rounded-t-2xl sticky top-0 overflow-hidden"
+        class="flex flex-row justify-between items-center rounded-t sticky top-0 overflow-hidden"
       >
         <h1
           :class="props.dark ? 'text-white' : 'text-slate-700'"

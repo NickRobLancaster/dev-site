@@ -111,7 +111,7 @@ const copyText = (textToCopy) => {
             <input
               disabled
               type="text"
-              class="p-1 rounded-l-2xl bg-white"
+              class="p-3 rounded-l-2xl bg-white"
               :value="site.email"
             /><button
               @click="copyText(site.email)"
