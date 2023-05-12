@@ -210,7 +210,7 @@ const copyText = (textToCopy) => {
     <div class="w-full">
       <div
         :class="darkMode ? 'bg-slate-700' : 'bg-slate-50'"
-        class="sticky top-0 z-10 w-full flex flex-row justify-between items-center gap-5"
+        class="fixed top-0 z-10 w-full flex flex-row justify-between items-center gap-5"
       >
         <!-- nav items -->
         <!-- left -->
@@ -429,7 +429,7 @@ const copyText = (textToCopy) => {
     <!-- app toolbar - footer -->
     <div
       :class="darkMode ? 'bg-slate-700' : 'bg-white'"
-      class="sticky bottom-0 z-10 w-full flex flex-row justify-between items-center p-2"
+      class="fixed bottom-0 z-10 w-full flex flex-row justify-between items-center p-2"
     >
       <button
         @click="modalEmail = true"
