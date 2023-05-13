@@ -286,9 +286,14 @@ const copyText = (textToCopy) => {
 
           <!-- projects -->
           <div
-            class="flex flex-col justify-between gap-5 border rounded-2xl p-5 w-4/6"
+            :class="
+              darkMode
+                ? 'text-white bg-slate-700'
+                : 'bg-gray-100 text-slate-700'
+            "
+            class="flex flex-col justify-between gap-5 rounded-2xl p-5 w-full lg:w-1/2"
           >
-            <h1 class="text-3xl text-center text-white">Our Work</h1>
+            <h1 class="text-3xl text-center">Our Work</h1>
 
             <div
               class="flex flex-col md:flex-row justify-between rounded-2xl gap-5 overflow-x-auto"
@@ -297,13 +302,13 @@ const copyText = (textToCopy) => {
               <div
                 v-for="(work, workIndex) in ourWork"
                 :key="workIndex"
-                class="overflow-hidden flex-1 rounded-2xl border cursor-default"
+                class="overflow-hidden flex-1 rounded-2xl border border-slate-400 cursor-default"
                 :class="rotatingColors[workIndex % rotatingColors.length]"
               >
                 <div class="flex flex-col justify-between h-full">
                   <!-- header -->
                   <div
-                    class="flex flex-row justify-between text-white border-b"
+                    class="flex flex-row justify-between border-b border-b-slate-400"
                   >
                     <div class="p-3">
                       {{ work.companyName }}
@@ -311,19 +316,19 @@ const copyText = (textToCopy) => {
                     <a
                       :href="work.url"
                       target="_blank"
-                      class="hover:bg-slate-800 text-white p-3"
+                      class="hover:bg-slate-800 p-3"
                     >
                       View Site
                     </a>
                   </div>
                   <!-- body -->
-                  <div class="flex flex-row items-center text-white p-3 flex-1">
+                  <div class="flex flex-row items-center p-3 flex-1">
                     <p class="block italic text-center">
                       {{ work.quote }}
                     </p>
                   </div>
                   <div
-                    class="flex flex-row justify-end text-white p-3 border-t"
+                    class="flex flex-row justify-end p-3 border-t border-t-slate-400"
                   >
                     <p class="block">- {{ work.author }}</p>
                   </div>
@@ -366,14 +371,12 @@ const copyText = (textToCopy) => {
           </div>
 
           <div
-            :class="
-              darkMode ? 'text-white bg-slate-700' : 'bg-gray-50 text-slate-700'
-            "
+            :class="darkMode ? ' bg-slate-700' : 'bg-gray-50 text-slate-700'"
             class="flex flex-col w-full justify-between gap-5 rounded-2xl p-5 lg:w-1/2"
           >
             <h1
               :class="darkMode ? 'text-white' : 'text-slate-700'"
-              class="text-3xl text-center text-white"
+              class="text-3xl text-center"
             >
               Our Team
             </h1>
