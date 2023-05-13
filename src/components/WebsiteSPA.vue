@@ -239,16 +239,16 @@ const copyText = (textToCopy) => {
           <button
             @click="toggleDarkMode"
             :class="
-              darkMode
-                ? 'bg-white border-slate-700'
-                : 'bg-slate-700 border-white'
+              darkMode ? 'bg-white text-slate-700' : 'bg-slate-700 text-white'
             "
-            class="border-4 border-dotted p-1 lg:p-3 rounded-full h-6 w-6"
-          ></button>
+            class="px-3 py-1 rounded-full text-sm border-none"
+          >
+            {{ darkMode ? "L" : "D" }}
+          </button>
           <div
             :class="
               page === 1
-                ? 'bg-indigo-500 hover:bg-indigo-700 font-bold'
+                ? 'bg-sky-500 hover:bg-sky-600 font-bold'
                 : 'bg-slate-500 hover:bg-slate-700'
             "
             @click="page = 1"
@@ -259,7 +259,7 @@ const copyText = (textToCopy) => {
           <div
             :class="
               page === 2
-                ? 'bg-indigo-500 hover:bg-indigo-700 font-bold'
+                ? 'bg-sky-500 hover:bg-sky-600 font-bold'
                 : 'bg-slate-500 hover:bg-slate-700'
             "
             @click="page = 2"
