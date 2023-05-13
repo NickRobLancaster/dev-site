@@ -214,19 +214,19 @@ const copyText = (textToCopy) => {
       >
         <!-- nav items -->
         <!-- left -->
-        <div class="p-1">
+        <div class="p-2">
           <!-- will be image in future -->
           <!-- <img src="" alt="" /> -->
           <!-- using text for now -->
           <h1
-            class="text-xl p-1 lg:p-3 border rounded-xl"
+            class="text-xl p-1 lg:p-2 border rounded-xl"
             :class="
               darkMode
                 ? 'text-slate-700 bg-slate-50'
                 : 'text-white bg-slate-700'
             "
           >
-            {{ "$\{" + site.brand + "\}" }}
+            {{ site.brand }}
           </h1>
         </div>
         <!-- middle -->
