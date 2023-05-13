@@ -28,9 +28,9 @@ const formattedPhone = computed(() => {
 const page = ref(1);
 
 const rotatingColors = ref([
-  "bg-gradient-to-br from-purple-500 to-indigo-500 hover:text-white",
-  "bg-gradient-to-br from-green-500 to-yellow-500 hover:text-white",
-  "bg-gradient-to-br from-teal-500 to-rose-500 hover:text-white",
+  "bg-gradient-to-br from-purple-500 to-indigo-500 text-white",
+  "bg-gradient-to-br from-green-500 to-yellow-500 text-white",
+  "bg-gradient-to-br from-teal-500 to-rose-500 text-white",
 ]);
 
 const ourWork = ref([
