@@ -347,10 +347,15 @@ const copyText = (textToCopy) => {
           class="relative flex flex-col justify-center items-center gap-10 w-full min-h-full bg-gradient-to-br from-indigo-500 to-sky-500 p-3 py-20"
         >
           <div
-            class="flex flex-col gap-5 bg-gradient-to-br from-red-500 via-yellow-500 to-rose-500 p-5 rounded-2xl text-justify lg:w-1/2"
+            :class="
+              darkMode
+                ? 'bg-slate-700 text-white'
+                : 'bg-gray-100 text-slate-700'
+            "
+            class="flex flex-col gap-5 p-5 rounded-2xl text-justify lg:w-1/2"
           >
-            <h1 class="text-3xl text-white text-center">About Us</h1>
-            <div class="flex flex-col text-lg text-white border rounded-2xl">
+            <h1 class="text-3xl text-center">About Us</h1>
+            <div class="flex flex-col text-lg border rounded-2xl">
               <h1 class="p-5">
                 We are a small a team of high performing developers. We don't
                 mean to toot our horn but we're great at what we do. We help
@@ -362,14 +367,12 @@ const copyText = (textToCopy) => {
 
               <hr />
 
-              <h3 class="p-5 text-lg text-white italic text-right">
-                - The CEO
-              </h3>
+              <h3 class="p-5 text-lg italic text-right">- The CEO</h3>
             </div>
           </div>
 
           <div
-            :class="darkMode ? ' bg-slate-700' : 'bg-gray-50 text-slate-700'"
+            :class="darkMode ? 'bg-slate-700' : 'bg-gray-100 text-slate-700'"
             class="flex flex-col w-full justify-between gap-5 rounded-2xl p-5 lg:w-1/2"
           >
             <h1
