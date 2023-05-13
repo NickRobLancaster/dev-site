@@ -5,7 +5,7 @@ defineProps({
   msg: String,
 });
 
-const darkMode = ref(false);
+const darkMode = ref(true);
 
 const toggleDarkMode = () => (darkMode.value = !darkMode.value);
 
@@ -28,9 +28,9 @@ const formattedPhone = computed(() => {
 const page = ref(1);
 
 const rotatingColors = ref([
-  "hover:bg-gradient-to-br hover:from-purple-500 hover:to-indigo-500 hover:text-white",
-  "hover:bg-gradient-to-br hover:from-green-500 hover:to-yellow-500 hover:text-white",
-  "hover:bg-gradient-to-br hover:from-teal-500 hover:to-rose-500 hover:text-white",
+  "bg-gradient-to-br from-purple-500 to-indigo-500 hover:text-white",
+  "bg-gradient-to-br from-green-500 to-yellow-500 hover:text-white",
+  "bg-gradient-to-br from-teal-500 to-rose-500 hover:text-white",
 ]);
 
 const ourWork = ref([
@@ -209,7 +209,7 @@ const copyText = (textToCopy) => {
     <!-- nav -->
     <div class="w-full">
       <div
-        :class="darkMode ? 'bg-slate-700' : 'bg-slate-50'"
+        :class="darkMode ? 'bg-slate-700' : 'bg-slate-100'"
         class="fixed top-0 z-10 w-full flex flex-row justify-between items-center gap-5"
       >
         <!-- nav items -->
@@ -431,7 +431,7 @@ const copyText = (textToCopy) => {
     </div>
     <!-- app toolbar - footer -->
     <div
-      :class="darkMode ? 'bg-slate-700' : 'bg-white'"
+      :class="darkMode ? 'bg-slate-700' : 'bg-slate-100'"
       class="fixed bottom-0 z-10 w-full flex flex-row justify-between items-center p-2"
     >
       <button

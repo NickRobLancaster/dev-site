@@ -27,7 +27,7 @@ const modalToggle = () => emit("close-modal");
     >
       <!-- HEADER -->
       <div
-        :class="props.dark ? 'bg-slate-700' : 'bg-slate-100'"
+        :class="props.dark ? 'bg-slate-700' : 'bg-slate-200'"
         class="flex flex-row justify-between items-center rounded-t sticky top-0 overflow-hidden"
       >
         <h1
@@ -47,20 +47,18 @@ const modalToggle = () => emit("close-modal");
       <!-- BODY -->
 
       <div
-        :class="props.dark ? 'bg-slate-400' : 'bg-slate-100'"
-        class="flex-1 bg-gray-100 border-y border-slate-300 overflow-y-auto w-full"
+        :class="props.dark ? 'bg-slate-400' : 'bg-slate-50'"
+        class="flex-1 overflow-y-auto w-full"
       >
         <slot name="body"></slot>
       </div>
 
       <!-- FOOTER -->
       <div
-        :class="props.dark ? 'bg-slate-700' : 'bg-slate-50'"
+        :class="props.dark ? 'bg-slate-700' : 'bg-slate-200'"
         class="flex flex-row-reverse justify-between items-center sticky bottom-0 overflow-hidden rounded-b"
       >
-        <slot name="footer">
-          <div class="p-6"></div>
-        </slot>
+        <slot name="footer"></slot>
       </div>
     </div>
   </div>
