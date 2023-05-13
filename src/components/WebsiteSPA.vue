@@ -241,10 +241,8 @@ const copyText = (textToCopy) => {
             :class="
               darkMode ? 'bg-white text-slate-700' : 'bg-slate-700 text-white'
             "
-            class="px-3 py-1 rounded-full text-sm border-none"
-          >
-            {{ darkMode ? "L" : "D" }}
-          </button>
+            class="rounded-full text-sm border-none h-5 w-5 mr-3"
+          ></button>
           <div
             :class="
               page === 1
