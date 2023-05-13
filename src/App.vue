@@ -1,5 +1,5 @@
 <script setup></script>
 
 <template>
-  <WebsiteSPA />
+  <WebsiteSPA class="scrolling-touch" />
 </template>
