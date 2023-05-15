@@ -5,6 +5,8 @@ defineProps({
   msg: String,
 });
 
+import { useMeta } from "@vueuse/core";
+
 const darkMode = ref(true);
 
 const toggleDarkMode = () => (darkMode.value = !darkMode.value);
@@ -15,6 +17,24 @@ const site = reactive({
   email: "nickroblancaster@gmail.com",
   phone: "7143952633",
   address: ["22501 Chase", "Apt 3112", "Aliso Viejo", "CA", "92656"],
+  // SEO
+  description: `Welcome to our distinguished digital atelier, where we masterfully craft exquisite web experiences akin to the Gucci of web development. We specialize in the design and development of sophisticated websites, intricate web apps, and dynamic single-page applications. Utilizing an avant-garde tech stack, including MongoDB, SQL, Node.js, PHP, Express.js, Vue.js, and Tailwind, we shape the future of digital interaction. Our creations do not merely exist within the internet space, they set the tone for it. As trendsetters in the digital realm, we consistently redefine the boundaries of design and development, delivering unparalleled elegance and functionality. Choose us for an exclusive journey towards a uniquely tailored, state-of-the-art web presence.`,
+  keywords:
+    "Aliso Viejo Web Development, Aliso Viejo Devs, Aliso Viejo Web Design, Aliso Viejo Software Development, Aliso Viejo Javascript Developers, Website Design, Website Development, Web Design, Web Development, Single Page Application Development, Vue Development, Tailwind Development, Tailwind CSS Development, High Quality Software Development, Software Web Development, Modern Web Development",
+});
+
+useMeta({
+  title: site.name,
+  meta: [
+    {
+      name: "description",
+      content: site.description,
+    },
+    {
+      name: "keywords",
+      content: site.keywords,
+    },
+  ],
 });
 
 const formattedPhone = computed(() => {
