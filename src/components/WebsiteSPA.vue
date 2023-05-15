@@ -1,5 +1,6 @@
 <script setup>
 import { ref, watch, computed, reactive, Teleport } from "vue";
+import { useMeta } from "@vueuse/core";
 
 defineProps({
   msg: String,
